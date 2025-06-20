@@ -33,14 +33,17 @@ export default function RandomColorgenerator(){
     return(
         <div style={{
             background:color,
-            width:"100vw",
-            height:"100vh"
+            height:"100wh",
+            width:"100vw"
+
         }}>
-            <button onClick={()=>setTypeOfColor("hex")}>Create Hex color</button>
-            <button onClick={()=>setTypeOfColor("rgb")}>Create RGB color</button>
-            <button onClick=
+           <div className="flex gap-5 justify-center ">
+             <button className="px-[10px] py-[10px] border rounded-xl mb-[20px] mt-[10px] hover:border-blue-500 hover:scale-110 bg-white" onClick={()=>setTypeOfColor("hex")}>Create Hex color</button>
+            <button className="px-[10px] py-[10px] border rounded-xl mb-[20px] mt-[10px] hover:border-blue-500 hover:scale-110 bg-white" onClick={()=>setTypeOfColor("rgb")}>Create RGB color</button>
+            <button className="px-[10px] py-[10px] border rounded-xl mb-[20px] mt-[10px] hover:border-blue-500 hover:scale-110 bg-white semi-bold" onClick=
             {typeOfColor==="hex"?handleCreateRandomHexColor:handleCreateRandomRgbColor}>
                 Create random color</button>
+           </div>
                 <div
                 style={{
                     display:"flex",

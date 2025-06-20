@@ -21,9 +21,9 @@ export default function Accordian(){
 console.log(multiple);
 
     return(
-        <div className="Wrapper flex flex-col h-100 w-100 justify-center items-center">
-        <button onClick={()=>setEnableMultiSelection(!enableMultiSecltion)} 
-        className="border-black mb-[20px]">Enable Multi Selection</button>
+        <div className="Wrapper flex flex-col  border justify-center items-center">
+        <button  onClick={()=>setEnableMultiSelection(!enableMultiSecltion)} 
+        className="px-[10px] py-[10px] border rounded-xl mb-[20px] mt-[10px] hover:border-blue-500 hover:scale-110">Enable Multi Selection</button>
        <div className="accordian w-[500px]">
          {
             data&&data.length>0?
