@@ -10,14 +10,14 @@ function App() {
 
   return (
     <>
-      {/* <Accordian/>
+      <Accordian/>
     <RandomColorgenerator/>
-    <StarRating noOfStars={10}/> */}
-      {/* <ImageSlider
+    <StarRating noOfStars={10}/>
+      <ImageSlider
         url={"https://picsum.photos/v2/list"}
         page={"1"}
         limit={"10"}
-      /> */}
+      />
       <LoadMoreData/>
     </>
   );
