@@ -6,7 +6,7 @@ import StarRating from './components/Star-Rating'
 import LoadMoreData from './components/load-more-data';
 import TreeMenu from './components/tree-view';
 import menus from './components/tree-view/data';
-import "./app.css";
+import "./App.css";
 function App() {
  
 
