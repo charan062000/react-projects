@@ -27,7 +27,7 @@ console.log(multiple);
        <div className="accordian w-[500px]">
          {
             data&&data.length>0?
-            data.map(dataItem=><div key={dataItem.id} className=" item bg-amber-700 mb-[10px] px-[10px] py-[20px]">
+            data.map(dataItem=><div key={dataItem.id} className=" item bg-blue-400 mb-[10px] px-[10px] py-[20px]">
                 <div  onClick={enableMultiSecltion?()=>handleMultiSelection(dataItem.id):()=>handleSingleSelection(dataItem.id)} className="title text-white flex justify-between items-center cursor-pointer ">
                     <h3 className=" h-auto">{dataItem.question}</h3>
                     <span>{selected===dataItem.id?"x":"+"}</span>
@@ -35,7 +35,7 @@ console.log(multiple);
                 <div>{
                     enableMultiSecltion?multiple.indexOf(dataItem.id)!==-1&&
                     <div>{dataItem.answer}</div>:
-                        selected===dataItem.id? <div className="font-semibold text-black">{dataItem.answer}</div>:null
+                        selected===dataItem.id? <div className="font-semibold text-grey">{dataItem.answer}</div>:null
                         }
                     </div>
             </div>):<div>No Data</div>
