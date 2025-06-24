@@ -46,7 +46,7 @@ export default function LoadMoreData() {
         {productsData && productsData.length ? (
           productsData.map((product, index) => (
             <div className="product p-[20px] w-[300px] h-[300px] border flex flex-col items-center justify-center">
-              <img src={product.thumbnail} alt={product.title} />
+              <img key={index} src={product.thumbnail} alt={product.title} />
               <p>{product.title}</p>
             </div>
           ))

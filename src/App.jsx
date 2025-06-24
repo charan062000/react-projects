@@ -3,14 +3,16 @@ import Accordian from './components/accordian'
 import ImageSlider from './components/image-slider'
 import RandomColorgenerator from './components/Random-color'
 import StarRating from './components/Star-Rating'
-import LoadMoreData from './load-more-data';
-
+import LoadMoreData from './components/load-more-data';
+import TreeMenu from './components/tree-view';
+import menus from './components/tree-view/data';
+import "./app.css";
 function App() {
  
 
   return (
     <>
-      <Accordian/>
+      {/* <Accordian/>
     <RandomColorgenerator/>
     <StarRating noOfStars={10}/>
       <ImageSlider
@@ -18,7 +20,8 @@ function App() {
         page={"1"}
         limit={"10"}
       />
-      <LoadMoreData/>
+      <LoadMoreData/> */}
+      <TreeMenu menus={menus} />
     </>
   );
 }
