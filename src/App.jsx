@@ -7,12 +7,13 @@ import LoadMoreData from './components/load-more-data';
 import TreeMenu from './components/tree-view';
 import menus from './components/tree-view/data';
 import "./App.css";
+import QrCodeGenerator from './components/qr-code-generator';
 function App() {
  
 
   return (
     <>
-      {/* <Accordian/>
+      <Accordian/>
     <RandomColorgenerator/>
     <StarRating noOfStars={10}/>
       <ImageSlider
@@ -20,8 +21,9 @@ function App() {
         page={"1"}
         limit={"10"}
       />
-      <LoadMoreData/> */}
+      <LoadMoreData/>
       <TreeMenu menus={menus} />
+      <QrCodeGenerator/>
     </>
   );
 }
