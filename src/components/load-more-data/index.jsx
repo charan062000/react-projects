@@ -41,13 +41,19 @@ export default function LoadMoreData() {
     return <div>{errormsg}</div>;
   }
   return (
-    <div className="load-more-container flex flex-col gap-[20px]">
+    <div className="load-more-container flex flex-col justify-center items-center gap-[20px]">
+      <h1 className="font-bold text-5xl">Products</h1>
       <div className="product-container grid grid-cols-4 gap-[10px]">
         {productsData && productsData.length ? (
           productsData.map((product, index) => (
-            <div className="product p-[20px] w-[300px] h-[300px] border flex flex-col items-center justify-center">
-              <img key={index} src={product.thumbnail} alt={product.title} />
-              <p>{product.title}</p>
+            <div className="product p-[20px] w-auto h-auto border-gray-200 border shadow-dark-400 shadow-2xl rounded-xl flex flex-col items-center justify-center">
+              <img
+                className="hover:scale-110 hover:transition- duration-150"
+                key={index}
+                src={product.thumbnail}
+                alt={product.title}
+              />
+              <p className="font-semibold text-gray-500">{product.title}</p>
             </div>
           ))
         ) : (
