@@ -43,46 +43,48 @@ export default function ImageSlider({ url, page = 1, limit = 5 }) {
     }
   
   return (
-    <div className="container relative flex justify-center content-center items-center w-[600px] h-[450px] ">
-      <BsArrowLeftCircleFill
-        size={25}
-        onClick={() => handlePrevious()}
-        className="arrow-left absolute  text-white drop-shadow-2xl left-4 cursor-pointer"
-      />
-      {images && images.length
-        ? images.map((imageItem, index) => (
-            <img
-              key={imageItem.id}
-              alt={imageItem.download_url}
-              src={imageItem.download_url}
-              className={
-                currentSlide === index
-                  ? "  rounded-xl shadow-xl w-[100%] h-[100%]"
-                  : " hide-current-image hidden  rounded-xl shadow-xl w-[100%] h-[100%]"
-              }
-            />
-          ))
-        : null}
-      <BsArrowRightCircleFill
-        size={25}
-        onClick={() => handleNext()}
-        className="arrow-right absolute text-white drop-shadow-2xl right-4 cursor-pointer"
-      />
-      <span className=" circle-indicator flex absolute bottom-4">
+    <div className="flex items-center justify-center mb-5 mt-5">
+      <div className="container relative flex justify-center content-center items-center w-[600px] h-[450px] ">
+        <BsArrowLeftCircleFill
+          size={25}
+          onClick={() => handlePrevious()}
+          className="arrow-left absolute  text-white drop-shadow-2xl left-4 cursor-pointer"
+        />
         {images && images.length
-          ? images.map((_, index) => (
-              <button
-                key={index}
+          ? images.map((imageItem, index) => (
+              <img
+                key={imageItem.id}
+                alt={imageItem.download_url}
+                src={imageItem.download_url}
                 className={
                   currentSlide === index
-                    ? "current-indicator  bg-white h-[15px] w-[15px] border-none rounded-full outline-none mx-0.5 cursor-pointer"
-                    : "bg-gray-600 h-[15px] w-[15px] border-none rounded-full outline-none mx-0.5 cursor-pointer"
+                    ? "  rounded-xl shadow-xl w-[100%] h-[100%]"
+                    : " hide-current-image hidden  rounded-xl shadow-xl w-[100%] h-[100%]"
                 }
-                onClick={() => setCurrentSlide(index)}
-              ></button>
+              />
             ))
           : null}
-      </span>
+        <BsArrowRightCircleFill
+          size={25}
+          onClick={() => handleNext()}
+          className="arrow-right absolute text-white drop-shadow-2xl right-4 cursor-pointer"
+        />
+        <span className=" circle-indicator flex absolute bottom-4">
+          {images && images.length
+            ? images.map((_, index) => (
+                <button
+                  key={index}
+                  className={
+                    currentSlide === index
+                      ? "current-indicator  bg-white h-[15px] w-[15px] border-none rounded-full outline-none mx-0.5 cursor-pointer"
+                      : "bg-gray-600 h-[15px] w-[15px] border-none rounded-full outline-none mx-0.5 cursor-pointer"
+                  }
+                  onClick={() => setCurrentSlide(index)}
+                ></button>
+              ))
+            : null}
+        </span>
+      </div>
     </div>
   );
 }

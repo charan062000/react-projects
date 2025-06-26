@@ -15,23 +15,26 @@ function App() {
   
   return (
     <>
-      <Accordian/>
-    <RandomColorgenerator/>
-    <StarRating noOfStars={10}/>
+      <Accordian />
+      <RandomColorgenerator />
+      <StarRating noOfStars={10} />
       <ImageSlider
         url={"https://picsum.photos/v2/list"}
         page={"1"}
         limit={"10"}
       />
-      <LoadMoreData/>
+      <LoadMoreData />
       <TreeMenu menus={menus} />
-      <QrCodeGenerator/>
-      <div className="flex flex-wrap justify-center items-center gap-5">
-        <Item name="apple 14pro" price="20000" />
-        <Item name="Mac book" price="100000" />
-        <Item name="Gucci hand bag" price="1950" />
-        <Item name="armani hand karchif" price="15700" />
-        <Item name="Nicon camera" price="25670" />
+      <QrCodeGenerator />
+      <div className="flex items-center justify-center flex-col">
+        <h1 className="mt-5  font-bold text-[32px] text-red-500">ADD TO CART section</h1>
+        <div className="flex flex-wrap justify-center items-center gap-5">
+          <Item name="apple 14pro" price="20000" />
+          <Item name="Mac book" price="100000" />
+          <Item name="Gucci hand bag" price="1950" />
+          <Item name="armani hand karchif" price="15700" />
+          <Item name="Nicon camera" price="25670" />
+        </div>
       </div>
       <CartItems />
     </>
